@@ -49,6 +49,6 @@ With the static IP set, log into the client VM to check connectivity. while runn
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-To install Active Directory on the domain controller VM, open Server Manager and select "Add Roles and Features." After confirming the VM's private IP address, choose "Active Directory Domain Services" in the Server Roles tab, add the required features, and complete the installation. To promote the server to a domain controller, click the warning flag in Server Manager and select "Promote this server to a domain controller." Create a new forest by specifying a domain name *This can be a domain name of your choosing*, set a domain password, and proceed through the installation screens. This process establishes the foundation for the Active Directory environment.
+To install Active Directory on the domain controller VM, open Server Manager and select "Add Roles and Features." After confirming the VM's private IP address, choose "Active Directory Domain Services" in the Server Roles tab, add the required features, and complete the installation. To promote the server to a domain controller, click the warning flag in Server Manager and select "Promote this server to a domain controller." Create a new forest by specifying a domain name (This can be a domain name of your choosing), set a domain password, and proceed through the installation screens. This process establishes the foundation for the Active Directory environment.
 </p>
 <br />
