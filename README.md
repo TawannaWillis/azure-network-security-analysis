@@ -33,7 +33,7 @@ In this lab, I set up Active Directory on Azure as a foundation for future proje
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Before diving in, I had to make sure the domain controller VM had a static IP. It's a crucial step - without it, the VMs won't talk to each other properly, even on the same virtual network. Within the Azure portal, I found the Networking tab for the domain controller VM, and clicked through to the IP configurations. Then, it was just a matter of flipping the assignment switch to *Static* and saving. This way, our domain controller has a fixed address that we can rely on for all our future setups.
 </p>
 <br />
 
