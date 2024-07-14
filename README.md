@@ -33,7 +33,7 @@ In this lab, I set up Active Directory on Azure as a foundation for future proje
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Before diving in, I had to make sure the domain controller VM had a static IP. It's a crucial step - without it, the VMs won't talk to each other properly, even on the same virtual network. Within the Azure portal, I found the Networking tab for the domain controller VM, and clicked through to the IP configurations. Then, it was just a matter of flipping the assignment switch to Static and saving. This way, our domain controller has a fixed address that we can rely on for all our future setups.
+Before diving in, make sure the domain controller VM had a static IP. It's a crucial step - without it, the VMs won't talk to each other properly, even on the same virtual network. Within the Azure portal, find the Networking tab for the domain controller VM, and clicked through to the IP configurations. Then flip the assignment switch to Static and saving. This way, our domain controller has a fixed address that we can rely on for all our future setups.
 </p>
 <br />
 
@@ -41,7 +41,7 @@ Before diving in, I had to make sure the domain controller VM had a static IP. I
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-With the static IP set, I logged into the client VM to check connectivity. I ran a continuous ping to the domain controller's private IP, but it kept timing out. So, I switched to the domain controller VM and tweaked the Windows Firewall. I opened it up using 'wf.msc', went to Inbound Rules, and enabled the ICMPv4 echo request rules. Back on the client VM, the ping started working like a charm. It's a small step, but crucial for making sure our VMs can talk to each other.
+With the static IP set, log into the client VM to check connectivity. while running a continuous ping to the domain controller's private IP, it will keep timing out. So, switch to the domain controller VM and tweak the Windows Firewall. Open it up using 'wf.msc', then go to Inbound Rules, and enabled the ICMPv4 echo request rules. Back on the client VM, the ping start working. This is a small step, but crucial for making sure our VMs can talk to each other.
 </p>
 <br />
 
@@ -49,6 +49,6 @@ With the static IP set, I logged into the client VM to check connectivity. I ran
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+To install Active Directory on the domain controller VM, open Server Manager and select "Add Roles and Features." After confirming the VM's private IP address, choose "Active Directory Domain Services" in the Server Roles tab, add the required features, and complete the installation. To promote the server to a domain controller, click the warning flag in Server Manager and select "Promote this server to a domain controller." Create a new forest by specifying a domain name *This can be a domain name of your choosing*, set a domain password, and proceed through the installation screens. This process establishes the foundation for the Active Directory environment.
 </p>
 <br />
