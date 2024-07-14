@@ -52,3 +52,14 @@ With the static IP set, log into the client VM to check connectivity. while runn
 To install Active Directory on the domain controller VM, open Server Manager and select "Add Roles and Features." After confirming the VM's private IP address, choose "Active Directory Domain Services" in the Server Roles tab, add the required features, and complete the installation. To promote the server to a domain controller, click the warning flag in Server Manager and select "Promote this server to a domain controller." Create a new forest by specifying a domain name (This can be a domain name of your choosing), set a domain password, and proceed through the installation screens. This process establishes the foundation for the Active Directory environment.
 </p>
 <br />
+
+
+
+
+
+
+
+<h2>Key Takeaways</h2>
+
+
+Setting up Active Directory in Azure requires careful network configuration, including assigning a static IP to the domain controller and enabling ICMP traffic through the Windows Firewall. The core process involves installing Active Directory Domain Services and promoting the server to a domain controller. These steps create a foundation for a functional Active Directory environment in the cloud, paving the way for future expansions and integrations.
