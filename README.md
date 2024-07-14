@@ -22,9 +22,9 @@ In this lab, I set up Active Directory on Azure as a foundation for future proje
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1. Set Domanin Controller IP address to static
-- Step 2
-- Step 3
+- Step 1. Set Domanin Controller IP Address To Static
+- Step 2. Check Connectivity From Client To Domain Controller
+- Step 3. Install Active Directory On Domain Controller
 - Step 4
 
 <h2>Deployment and Configuration Steps</h2>
