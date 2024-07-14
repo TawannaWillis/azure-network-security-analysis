@@ -22,7 +22,7 @@ In this lab, I set up Active Directory on Azure as a foundation for future proje
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
+- Step 1. Set Domanin Controller IP address to static
 - Step 2
 - Step 3
 - Step 4
