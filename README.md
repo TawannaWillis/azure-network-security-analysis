@@ -20,12 +20,6 @@ In this lab, I set up Active Directory on Azure as a foundation for future proje
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
-
-- Step 1. Set Domanin Controller IP Address To Static
-- Step 2. Check Connectivity From Client To Domain Controller
-- Step 3. Install Active Directory On Domain Controller
-- Step 4
 
 <h2>Deployment and Configuration Steps</h2>
 
