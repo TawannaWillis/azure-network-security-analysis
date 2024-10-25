@@ -24,7 +24,8 @@ In this lab, I set up Active Directory on Azure as a foundation for future proje
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src=![image](https://github.com/user-attachments/assets/147a0bbd-c19a-4608-baf0-5c69f97102d7)
+![image](https://github.com/user-attachments/assets/dd456596-3da3-4676-b98e-4efd4e079909)
+
 />
 </p>
 <p>
