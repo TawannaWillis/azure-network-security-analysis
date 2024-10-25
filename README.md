@@ -24,7 +24,7 @@ In this lab, I set up Active Directory on Azure as a foundation for future proje
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src=IP config.png/>
 
 />
 </p>
