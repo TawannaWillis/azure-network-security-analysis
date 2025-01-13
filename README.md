@@ -1,76 +1,118 @@
 <p align="center">
-<img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
+<img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
 </p>
 
-<h1>Active Directory Configurations in Azure</h1>
-This lab is a follow up to the lab where I installed Active Directory and created a domain controller. I will now be configuring Active Directory and allowing a client to join the domain as well as creating user accounts. <br />
+<h1>Inspecting Traffic Between Azure Virtual Machines</h1>
+In this lab, I explore various types of network traffic involving Azure virtual machines using Wireshark and also experiment with configuring network security groups. <br />
+
+
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Active Directory Domain Services
-- PowerShell
+- Microsoft Azure (Virtual Machines/Computer)
+- Remote Desktop Connection
+- Command-Line Tools
+- Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
+- Wireshark (Protocol Analyzer)
 
 <h2>Operating Systems Used </h2>
 
-- Windows Server 2022
 - Windows 10 Pro (21H2)
+- Ubuntu Server 20.04
 
-<h2>Configuration Steps</h2>
+<h2>Environment Prep</h2>
+
+<br />-Set up two VMs in Azure within the same virtual network.<br />
+<br />-Configure one VM with Windows 10 Pro and the other with Ubuntu.<br />
+<br />-Use the Windows VM to connect to the Ubuntu VM via command line or PowerShell.<br /> 
+
+<h2>Actions and Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/EFjZrUG.png" height="80%" width="80%" alt="Configuration Steps"/>
-<img src="https://i.imgur.com/HSJk3BO.png" height="80%" width="80%" alt="Configuration Steps"/>
+<img src="https://i.imgur.com/DutP0XT.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Now that Active Directory is installed on the domain controller VM, it is time to create new Organizational Units and Users. With the Active Directory Users and Computers console open, right click on the domain you created (in my case, ernestotest.com) and make a new Organizational Unit (OU). I have created two Organizational Units, _EMPLOYEES and _ADMINS. The reason behind this naming scheme is because a Powershell script will be utilized later. Within the _ADMINS OU, I created a new User called Jane Doe. Jane's account will be given administrative privileges through the use of a Security Group. To grant admin privileges to a User, right click on the user and open their Properties. Click Member Of then Add to apply the appropraite security group. In this case, I added Jane to the Domain Admins security group. From now on, I will be using Jane's account to make any further changes. I will be logging off as labuser and log in as jane_admin.
+<br />-Connect to the Windows VM via Remote Desktop using its public IP.<br />
+<br />-Install Wireshark to begin analyzing network traffic.<br />
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/X6UGnsf.png" height="80%" width="80%" alt="Configuration Steps"/>
+<img src="https://i.imgur.com/2JQawfN.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Before the client can join the domain, it is important to configure the DNS settings first. The DNS server has to pointing to the domain controller's private IP address. On the Azure portal, open the Networking tab and click on Network Interface. In the DNS servers, enter the domain controller's private IP address and save the changes. Restart the client VM in order to ensure the DNS changes are saved. 
+<br />-Apply a filter for ICMP traffic in Wireshark.<br />
+<br />-Open PowerShell and run the ping command to test network communication.<br />
+<br />-Test communication with the Ubuntu VM using its private IP and with google.com.<br />
+<br />-Initiate a continuous ping to the Ubuntu VM using: ping -t (IP address) to observe network security groups.<br />
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/b1gUew4.png" height="80%" width="80%" alt="Configuration Steps"/>
-<img src="https://i.imgur.com/N0Mnfoq.png" height="80%" width="80%" alt="Configuration Steps"/>
-<img src="https://i.imgur.com/DkPUJNR.png" height="80%" width="80%" alt="Configuration Steps"/>
+<img src="https://i.imgur.com/HTga2Iq.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-It is now time to make the client VM join the domain. In the System menu of the client VM, click on Rename this PC (advanced) and Change. Enter the domain and necessary credentials in order to let the client join the domain. I am logging in as Jane Doe for the purposes of the lab. It is important to note that the login credentials have to be input within the context of the domain path. The client should now be part of the domain. On the domain controller, the client should now appear in Computers in the Active Directory Users and Computers panel.
+<br />-Access the networking settings for the Ubuntu VM in the Azure portal.<br />
+<br />-Create an inbound security rule to block ICMP traffic.<br />
+<br />-Set the rule's priority higher than SSH (300) to ensure it takes precedence.<br /> 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/jmR2LXa.png" height="80%" width="80%" alt="Configuration Steps"/>
+<img src="https://i.imgur.com/i3BC2LW.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Before users in the domain can use the client computer, Remote Desktop has to be enabled for non-administrative users. While logged in as the administrator (in my case, Jane), open System Properties. Click on Remote Desktop and Select users that can remotely access this PC. Allow Domain Users access to Remote Desktop. Non-administrative users can now log in to Client-1. Normally a Group Policy can do the same and allows changes to many systems at once. For the purposes of this lab, a Group Policy won't be used to make this change.
+<br />-Open the Azure portal and configure networking settings for the Ubuntu VM.<br />
+<br />-Add an inbound security rule to block ICMP traffic, setting priority above SSH (300).<br />
+<br />-Check the Windows VM and confirm ICMP traffic is blocked.<br />
+<br />-Modify the rule to allow ICMP traffic.<br />
+<br />-Run the continuous ping to ensure it resolves without timeouts.<br />
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/HrI6BTq.png" height="80%" width="80%" alt="Configuration Steps"/>
-<img src="https://i.imgur.com/c7LaN48.png" height="80%" width="80%" alt="Configuration Steps"/>
+<img src="https://i.imgur.com/fDtuLo9.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Creating users can be done manually or through the use of a script. For this lab, I will be using a PowerShell script. The PowerShell script can be found <a href="https://github.com/AsiaPonder001/BunchofUsers/blob/main/README.md?plain=1)"> here. </a> On the domain controller, open PowerShell ISE as an administrator (and make sure you are logged in with an admin account on the domain controller). Create a new file and paste the script into ISE console. Run the script and observe the accounts being created. 
+<br />-Examine SSH traffic by logging into the Ubuntu server via PowerShell using the ssh command.<br />
+<br />-Filter SSH traffic in Wireshark with tcp.port == 22.<br />
+<br />-View session activity in Wireshark, where each command executed on the Ubuntu server is logged.<br />
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/Xn5tQU2.png" height="80%" width="80%" alt="Configuration Steps"/>
+<img src="https://i.imgur.com/mptFClI.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-After creating the users, Client-1 can now be signed in as one of the new users that were created from the PowerShell script. Pick a name and simply sign in to the client with the context of the domain. In my case, it is ernestotest.com\bon.rovej.
+<br />-Exit the Ubuntu server to filter for DHCP traffic.<br />
+<br />-Attempt to issue a new IP address from the VM using the ipconfig /renew command.<br />
+<br />-Note that the command temporarily disconnects for a few seconds.<br />
+<br />-After reconnecting, observe the resulting DHCP traffic in Wireshark.<br />
 </p>
 <br />
 
-<h2>Lessons Learned</h2>
+<p>
+<img src="https://i.imgur.com/gtiupfH.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+</p>
+<p>
+<br />-Filter DNS traffic in Wireshark using udp.port == 53.<br />
+<br />-Use the nslookup command to query google.com and disney.com.<br />
+<br />-Observe the results of the DNS lookup for these popular sites.<br /> 
+</p>
+<br />
 
-Doing this lab has made me learn how to set up Active Directory and join clients to the domain. I also created users and assigned the necessary permissions. Active Directory is not difficult to learn despite all the menu navigation that takes place. This lab is a segway for me to learn about DNS settings in-depth and file permissions in action. I will go into detail about these topics in other labs.
+<p>
+<img src="https://i.imgur.com/N7voXYU.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+</p>
+<p>
+<br />-Filter RDP traffic in Wireshark using tcp.port == 3389.<br />
+<br />-Observe continuous traffic as RDP streams live data between the computer and the VM hosted on Azure.<br />
+</p>
+<br />
+
+<h2>Lessons Learned </h2>
+
+The goal of the lab was to observe how different protocols and ports are used in network communication between devices.
+Although the lab didn’t focus on troubleshooting, it provided valuable information.
+I learned that troubleshooting requires tools like Wireshark and the command line to understand how traffic flows through network ports and protocols.
+I realized that success in troubleshooting depends on both familiarity with the tools and maintaining an inquisitive mindset.
