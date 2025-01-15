@@ -34,7 +34,7 @@ Test and configure network security groups. <br />
 
 <p>
 <p>
-<img src="https://i.imgur.com/WJCdE6t.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+<img src="https://i.imgur.com/2LNjiW7.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 </p>
 <p>
