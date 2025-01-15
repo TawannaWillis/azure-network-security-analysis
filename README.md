@@ -33,7 +33,7 @@ Test and configure network security groups. <br />
 <h2>Actions and Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DutP0XT.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+![Image Alt](image_url)
 </p>
 <p>
 <br />-Connect to the Windows VM via Remote Desktop using its public IP.<br />
