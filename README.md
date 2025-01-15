@@ -79,7 +79,7 @@ Test and configure network security groups. <br />
 <br />
 
 <p>
-<img src="https://i.imgur.com/fDtuLo9.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+<img src="https://i.imgur.com/sOetUEf.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
 <br />-Examine SSH traffic by logging into the Ubuntu server via PowerShell using the ssh command.<br />
