@@ -46,7 +46,7 @@ Test and configure network security groups. <br />
 <br />
 
 <p>
-<img src="https://i.imgur.com/2JQawfN.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+<img src="https://i.imgur.com/DfuUTYy.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
 <br />-Apply a filter for ICMP traffic in Wireshark.<br />
