@@ -34,8 +34,8 @@ Test and configure network security groups. <br />
 
 <p>
 <p>
-<img src="https://raw.githubusercontent.com/username/repository/branch/images/DutP0XT.png" height="80%" width="80%" alt="Azure Networking Steps"/>
-
+<img src="https://i.imgur.com/WJCdE6t.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+</p>
 </p>
 <p>
 </p>
