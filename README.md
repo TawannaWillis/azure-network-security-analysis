@@ -67,7 +67,7 @@ Test and configure network security groups. <br />
 <br />
 
 <p>
-<img src="https://i.imgur.com/i3BC2LW.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+<img src="https://i.imgur.com/uIQktM5.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
 <br />-Open the Azure portal and configure networking settings for the Ubuntu VM.<br />
