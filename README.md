@@ -100,7 +100,7 @@ Test and configure network security groups. <br />
 <br />
 
 <p>
-<img src="https://i.imgur.com/gtiupfH.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+<img src="https://i.imgur.com/RjrkvRQ.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
 <br />-Filter DNS traffic in Wireshark using udp.port == 53.<br />
