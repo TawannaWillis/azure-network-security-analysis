@@ -1,8 +1,8 @@
 <p align="center">
-<img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
+<img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
 </p>
 
-<h1>Installing Active Directory in Azure</h1>
+<h1>Inspecting Traffic Between Azure Virtual Machines</h1>
 <br /><h2>Objectives</h2>
 
 Analyze network traffic between Azure virtual machines using Wireshark.<br />
