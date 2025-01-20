@@ -110,7 +110,7 @@ Test and configure network security groups. <br />
 <br />
 
 <p>
-<img src="https://i.imgur.com/N7voXYU.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+<img src="https://i.imgur.com/exIcntV.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
 <br />-Filter RDP traffic in Wireshark using tcp.port == 3389.<br />
