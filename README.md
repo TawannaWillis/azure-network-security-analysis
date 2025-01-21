@@ -7,6 +7,12 @@
 
 This project focuses on configuring Network Security Groups (NSGs) in Azure and inspecting network protocols to enhance security. It includes rules setup, traffic monitoring, and protocol analysis. <br />
 
+<h2>Skills</h2>
+
+- Network Security
+- Protocol Analysis
+- Azure Networking
+
 
 
 <h2>Environments and Technologies Used</h2>
