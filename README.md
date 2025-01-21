@@ -102,7 +102,7 @@ This project focuses on configuring Network Security Groups (NSGs) in Azure and 
 <br />
 
 <p>
-<img src="https://i.imgur.com/N7voXYU.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+<img src="https://i.imgur.com/Xr7AGGZ.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
 <br />-Filter RDP traffic in Wireshark using tcp.port == 3389.<br />
