@@ -87,18 +87,12 @@ This project focuses on configuring Network Security Groups (NSGs) in Azure and 
 <br />
 
 <p>
-<img src="https://i.imgur.com/mptFClI.png" height="80%" width="80%" alt="Azure Networking Steps"/>
-</p>
-<p>
-<br />-Exit the Ubuntu server to filter for DHCP traffic.<br />
-<br />-Attempt to issue a new IP address from the VM using the ipconfig /renew command.<br />
-<br />-Note that the command temporarily disconnects for a few seconds.<br />
-<br />-After reconnecting, observe the resulting DHCP traffic in Wireshark.<br />
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/gtiupfH.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+<img src="https://i.imgur.com/fCf8jry.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
 <br />-Filter DNS traffic in Wireshark using udp.port == 53.<br />
