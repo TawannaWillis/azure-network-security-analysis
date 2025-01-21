@@ -2,17 +2,16 @@
 <img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
 </p>
 
-<h1>Inspecting Traffic Between Azure Virtual Machines</h1>
+<h1>Network Security Groups (NSGs) and Inspecting Network Protocols</h1>
 <br /><h2>Objectives</h2>
 
-Analyze network traffic between Azure virtual machines using Wireshark.<br />
-Test and configure network security groups. <br />
+This project focuses on configuring Network Security Groups (NSGs) in Azure and inspecting network protocols to enhance security. It includes rules setup, traffic monitoring, and protocol analysis. <br />
 
 
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Computer)
+- Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop Connection
 - Command-Line Tools
 - Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
